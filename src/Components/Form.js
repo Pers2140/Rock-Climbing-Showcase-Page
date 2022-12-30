@@ -12,7 +12,7 @@ function UserForm() {
     useEffect(() => {
         const fetchEvents = async () =>{
             setLoading(true)
-            const res = await fetch(' http://127.0.0.1:8080/data.json')
+            const res = await fetch('/data.json')
             const {locName} = await res.json()
 
             setEventData(locName)
