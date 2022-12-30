@@ -19,10 +19,10 @@ const Map = ({ eventData,geoLoc }) => {
       try {
         // Getting gym geo location and rounding value
         // console.log(eventData[key].googleInfo.geoLoc)
-        const getLat = Math.round(eventData[key].googleInfo.geoLoc[0])
-        const getLng = Math.round(eventData[key].googleInfo.geoLoc[1])
+        const getLat = (eventData[key].googleInfo.geoLoc[0])
+        const getLng = (eventData[key].googleInfo.geoLoc[1])
         // Geting name to display
-        const name = eventData[key].googleInfo.correct_name.substr(0,16)+"..."
+        const name = eventData[key].googleInfo.correct_name
 
         // console.log(eventData[key].gym_info[0])
         const gym_site = eventData[key].gym_info[0]
@@ -31,12 +31,8 @@ const Map = ({ eventData,geoLoc }) => {
           // create a DOM element for the marker
           var el = document.createElement('div');
           el.className = 'marker';
-          el.innerHTML = `
-            
-          <div style="width:10px;height:10px;background:red;"></div>
-
-          `
-
+          el.innerHTML = `<a target="_blank"  href="http://${gym_site}"><h5 class="markerText">${name}<img style="visibility:visible;width:50px;height:50px" src=${red_marker}><h5><a>`
+          
           // create map marker 
           new mapboxgl.Marker(el,
             { color: "black",

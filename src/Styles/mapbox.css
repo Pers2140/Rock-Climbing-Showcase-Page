@@ -6,6 +6,7 @@
 .marker{
         width:100px;
         min-height:100px;
+        font-size: small;
         /* border:2px solid red; */
     }
 .markerText{
