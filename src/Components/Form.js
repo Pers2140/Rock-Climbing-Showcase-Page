@@ -6,28 +6,28 @@ import data from '../data.json'
 import './Styles/sidebar.css'
 
 function UserForm() {
-    // const [eventData, setEventData] = useState([])
-    // const [loading, setLoading] = useState(false)
+    const [eventData, setEventData] = useState([])
+    const [loading, setLoading] = useState(false)
 
-    // useEffect(() => {
-    //     const fetchEvents = async () =>{
-    //         setLoading(true)
-    //         const res = await fetch(' http://127.0.0.1:8080/data.json')
-    //         const {locName} = await res.json()
+    useEffect(() => {
+        const fetchEvents = async () =>{
+            setLoading(true)
+            const res = await fetch(' http://127.0.0.1:8080/data.json')
+            const {locName} = await res.json()
 
-    //         setEventData(locName)
-    //         setLoading(false)
-    //     }
+            setEventData(locName)
+            setLoading(false)
+        }
 
-    //     fetchEvents()
-    //     console.log(eventData)
-    // },[])
+        fetchEvents()
+        console.log(eventData)
+    },[])
 
    
-    // let avg_center = {
-    //     lat: 38.54555438314078,
-    //     lng: -97.9853579502318
-    // }
+    let avg_center = {
+        lat: 38.54555438314078,
+        lng: -97.9853579502318
+    }
     const search_results = {}
     const [search, setSearch] = useState('')
     const [filtered_data, setfiltered_data] = useState({})

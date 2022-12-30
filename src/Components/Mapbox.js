@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import './Styles/mapbox.css'
+import red_marker from '../images/red_marker.png'
 import 'mapbox-gl/dist/mapbox-gl.css';
 import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
 
@@ -30,7 +31,7 @@ const Map = ({ eventData,geoLoc }) => {
           // create a DOM element for the marker
           var el = document.createElement('div');
           el.className = 'marker';
-          el.innerHTML = `<a target="_blank"  href="http://${gym_site}"><h5 class="markerText">${name}<img style="visibility:visible;width:50px;height:50px"src="https://www.flaticon.com/premium-icon/icons/svg/4357/4357659.svg"><h5><a>`
+          el.innerHTML = `<a target="_blank"  href="http://${gym_site}"><h5 class="markerText">${name}<img style="visibility:visible;width:50px;height:50px" src=${red_marker}><h5><a>`
           
           // create map marker 
           new mapboxgl.Marker(el,
