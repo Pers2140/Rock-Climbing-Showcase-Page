@@ -3,7 +3,7 @@ import { useState, useEffect} from 'react'
 import Mapbox from './Mapbox'
 import Infobar from './InfoBar'
 import data from '../data.json'
-import './Styles/sidebar.css'
+import '../Styles/sidebar.css'
 
 function UserForm() {
     const [eventData, setEventData] = useState([])

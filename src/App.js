@@ -1,4 +1,5 @@
 import UserForm from './Components/Form'
+import './Styles/App.css'
 
 
 function App() {

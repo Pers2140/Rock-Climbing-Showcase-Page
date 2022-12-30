@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
-import './Styles/mapbox.css'
+import '../Styles/mapbox.css'
 import red_marker from '../images/red_marker.png'
 import 'mapbox-gl/dist/mapbox-gl.css';
 import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
@@ -60,11 +60,11 @@ const Map = ({ eventData,geoLoc }) => {
     // Add navigation control (the +/- zoom buttons)
     map.addControl(new mapboxgl.NavigationControl(), 'top-right');
 
-    map.on('move', () => {
-      setLng(map.getCenter().lng.toFixed(4));
-      setLat(map.getCenter().lat.toFixed(4));
-      setZoom(map.getZoom().toFixed(2));
-    });
+    // map.on('move', () => {
+    //   setLng(map.getCenter().lng.toFixed(4));
+    //   setLat(map.getCenter().lat.toFixed(4));
+    //   setZoom(map.getZoom().toFixed(2));
+    // });
 
     // Clean up on unmount
     return () => map.remove();
