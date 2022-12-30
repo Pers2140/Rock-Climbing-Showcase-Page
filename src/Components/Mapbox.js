@@ -31,8 +31,12 @@ const Map = ({ eventData,geoLoc }) => {
           // create a DOM element for the marker
           var el = document.createElement('div');
           el.className = 'marker';
-          el.innerHTML = `<a target="_blank"  href="http://${gym_site}"><h5 class="markerText">${name}<img style="visibility:visible;width:50px;height:50px" src=${red_marker}><h5><a>`
-          
+          el.innerHTML = `
+            
+          <div style="width:10px;height:10px;background:red;"></div>
+
+          `
+
           // create map marker 
           new mapboxgl.Marker(el,
             { color: "black",
