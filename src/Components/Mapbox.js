@@ -74,7 +74,7 @@ const Map = ({ eventData,geoLoc }) => {
     <div>
       <div className="sidebarStyle">
       </div>
-      <div style={{ "position":"relative","text-align":"right","color":"white","padding":"5px"}}>
+      <div style={{ "position":"relative","textAlign":"right","color":"white","padding":"5px"}}>
         Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
       </div>
       <div  className="map-container" ref={mapContainerRef} />

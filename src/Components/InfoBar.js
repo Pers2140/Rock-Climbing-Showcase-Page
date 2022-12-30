@@ -19,11 +19,11 @@ export default function InfoBar({gym_data}) {
 
     return (
         <>
-        <div class="card info-bar" >
-        <div class="card-body">
-        <   a target="_blank"  href={link}><h3 class="card-title title">{gym_name}</h3></a>
-            <p class="card-text">{rating}</p>
-            <a target="_blank" href={address_geo}><p class="card-text"><h6>{address}</h6></p></a>
+        <div className="card info-bar" >
+        <div className="card-body">
+        <   a target="_blank" rel="noreferrer" href={link}><h3 className="card-title title">{gym_name}</h3></a>
+            <p className="card-text">{rating}</p>
+            <a target="_blank" rel="noreferrer" href={address_geo}><p className="card-text"><h6>{address}</h6></p></a>
         
         </div>
         </div>
